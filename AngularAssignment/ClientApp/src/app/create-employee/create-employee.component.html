@@ -1,0 +1,31 @@
+<div class="container">
+  <form [formGroup]="service.formModel"  class="employeeForm" (submit)="saveEmployeeData()">
+    <mat-grid-list cols="2" rowHeight="270px">
+      <mat-grid-tile>
+        <div class="controles-container">
+          <input type="hidden" formControlName="id">
+          <mat-form-field>
+            <input matInput
+                   placeholder="UserName"
+                   formControlName="userName" required>
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput
+                   placeholder="Email"
+                   formControlName="email" >
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput
+                   placeholder="Password"
+                   formControlName="password" required>
+          </mat-form-field>
+        </div>
+      </mat-grid-tile>
+    </mat-grid-list>
+    <button mat-raised-button
+            color="primary"
+            class="Edit-Button">
+      Save
+    </button>
+  </form>
+</div>
