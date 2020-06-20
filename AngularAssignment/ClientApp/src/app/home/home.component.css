@@ -121,7 +121,7 @@ my-app {
 @media (min-width: 320px) {
 
   .martop {
-    margin-top: 10% !important;
+    margin-top: 5% !important;
   }
   .navbar-nav .nav-link {
     color: black !important;

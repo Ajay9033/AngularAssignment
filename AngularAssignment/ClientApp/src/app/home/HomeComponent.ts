@@ -6,6 +6,8 @@ import { User } from '../shared/user.model';
 import { MatDialogConfig, MatDialog } from '@angular/material/dialog';
 import { CreateEmployeeComponent } from '../create-employee/create-employee.component';
 import { DeleteService } from '../Shared/delete.service';
+import { PageSizeItem, PageChangeEvent } from '@progress/kendo-angular-grid';
+import { InputsModule, SliderModule } from '@progress/kendo-angular-inputs';
 
 @Component({
   selector: 'app-home',
@@ -14,6 +16,7 @@ import { DeleteService } from '../Shared/delete.service';
 })
 export class HomeComponent implements OnInit {
   //userClaims: any;
+
 
   constructor(private service: UserService, private router: Router, private dialog: MatDialog, private deleteService: DeleteService) { }
 
@@ -34,7 +37,6 @@ export class HomeComponent implements OnInit {
     );
     this.gridView = this.EmployeeList;
   }
-
 
 
   public onFilter(inputValue: string): void {

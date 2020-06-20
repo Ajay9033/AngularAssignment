@@ -11,6 +11,7 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { UserprofileComponent } from './userprofile/userprofile.component';
 import { TechnologyComponent } from './technology/technology.component';
+import { AllProfileComponent } from './all-profile/all-profile.component';
 
 
 export const appRoutes: Routes = [
@@ -40,6 +41,10 @@ export const appRoutes: Routes = [
   {
     path: 'technology', component: NavBarComponent,
     children: [{ path: '', component: TechnologyComponent, canActivate: [AuthGuard] }]
+  },
+  {
+    path: 'AllUser', component: NavBarComponent,
+    children: [{ path: '', component: AllProfileComponent }]
   },
   {
     path: 'signup', component: UserComponent,

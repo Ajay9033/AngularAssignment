@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
-
+//import { ToastrModule } from 'ngx-toastr';
 import { AppComponent } from './app.component';
 import { SignUpComponent } from './user/sign-up/sign-up.component';
 import { UserService } from './shared/user.service';
@@ -14,7 +14,7 @@ import { appRoutes } from './routes ';
 import { HomeComponent } from "./home/HomeComponent";
 import { GridModule, ExcelModule } from '@progress/kendo-angular-grid';
 import { MaterialModule } from './material/material.module';
-import { InputsModule } from '@progress/kendo-angular-inputs';
+import { InputsModule, SliderModule } from '@progress/kendo-angular-inputs';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { DeleteConfirmComponent } from './delete-confirm/delete-confirm.component';
 import { CreateEmployeeComponent } from './create-employee/create-employee.component';
@@ -42,6 +42,7 @@ import { AuthGuard } from './auth/auth.guard';
 import { MatMenuModule } from '@angular/material/menu';
 import { UserprofileComponent } from './userprofile/userprofile.component';
 import { TechnologyComponent } from './technology/technology.component';
+import { AllProfileComponent } from './all-profile/all-profile.component';
 
 //import { ToastrModule } from 'ngx-toastr';
 
@@ -62,6 +63,7 @@ import { TechnologyComponent } from './technology/technology.component';
     ContactUsComponent,
     UserprofileComponent,
     TechnologyComponent,
+    AllProfileComponent,
   ],
   imports: [
     BrowserModule,
@@ -103,7 +105,11 @@ import { TechnologyComponent } from './technology/technology.component';
     MatSidenavModule,
     MatDialogModule,
     MatBadgeModule,
-    MatMenuModule
+    MatMenuModule,
+    SliderModule,
+    //ToastrModule.forRoot({
+    //  progressBar: true
+    //})
   ],
   providers: [UserService, DeleteService, AuthGuard],
   bootstrap: [AppComponent],

@@ -67,5 +67,8 @@ export class UserService {
     };
     return this.http.post(this.rootUrl + '/api/UserProfile/Add',body);
   }
- 
+  getAllEmployees(): Observable<User[]> {
+    var tokenHeader = new HttpHeaders({ 'Authorization': 'Bearer ' + localStorage.getItem('token') });
+    return this.http.get<User[]>(this.rootUrl + '/api/UserProfile', { headers: tokenHeader });
+  } 
 }

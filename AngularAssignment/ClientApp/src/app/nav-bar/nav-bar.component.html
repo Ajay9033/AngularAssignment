@@ -1,7 +1,7 @@
 <mat-toolbar id="mainToolbar" class="color">
   <div class="nav-wrapper">
-    <mat-icon aria-hidden="false" aria-label=" home icon" class="icon" (click)="onToolbarMenuToggle()"
-              id="toolbarMenu">home</mat-icon>
+    <mat-icon aria-hidden="false" aria-label=" home icon" class="icon" id="toolbarMenu">home</mat-icon> <!--(click)="onToolbarMenuToggle()"-->
+             
     <a class='a-1' [matMenuTriggerFor]='appMenu'>
       Profile
     </a>
@@ -41,6 +41,7 @@
 <mat-menu #about='matMenu' [overlapTrigger]="false">
   <a mat-menu-item routerLink='/aboutus'>Company</a>
   <a mat-menu-item routerLink='/aboutus'>Why TatvaSoft ?</a>
+  <!--<a mat-menu-item routerLink='/AllUser'>AllUser</a>-->
 </mat-menu>
 
 <mat-menu #tech='matMenu' [overlapTrigger]="false">
@@ -50,7 +51,7 @@
 
 <mat-sidenav-container id="sidenavContainer"
                        fullscreen>
-  <mat-sidenav mode="side"
+  <!--<mat-sidenav mode="side"
                #sidenav
                id="sidenav"
                [class.menu-open]="isMenuOpen"
@@ -67,7 +68,7 @@
         </button>
       </mat-list-item>
     </mat-list>
-  </mat-sidenav>
+  </mat-sidenav>-->
   <mat-sidenav-content [ngStyle]="{ 'margin-left.px': contentMargin }">
     <router-outlet></router-outlet>
   </mat-sidenav-content>

@@ -1,4 +1,3 @@
-
 <div class="container martop">
   <kendo-grid [kendoGridBinding]="EmployeeList"
               kendoGridSelectBy="id"
@@ -18,9 +17,9 @@
               (click)="onCreate()">
         Create New User
       </button>
-      <button mat-raised-button kendoGridExcelCommand icon="file-excel" style="float:right;"
-              color="accent">
-        Export to Excel
+      <button mat-raised-button kendoGridExcelCommand icon="file-csv" style="float:right;"
+         color="accent">
+        Export to CSV
       </button>
       <!--<input placeholder="Search in all columns..." kendoTextBox (input)="onFilter($event.target.value)" />-->
       <!--<button kendoGridExcelCommand type="button" icon="file-excel" style="float:right;">Export to Excel</button>-->
@@ -42,7 +41,7 @@
       <kendo-grid-column field="email" title="Email" [width]="220">
       </kendo-grid-column>
     </kendo-grid-column-group>
-    <kendo-grid-command-column width="220">
+    <kendo-grid-command-column width="220" title="Actions">
       <ng-template kendoGridCellTemplate let-dataItem>
         <button kendoGridEditCommand
                 class="k-primary"
@@ -55,7 +54,7 @@
         </button>
       </ng-template>
     </kendo-grid-command-column>
-    <kendo-grid-excel fileName="Employees.xlsx"></kendo-grid-excel>
+    <kendo-grid-excel fileName="Employees.csv"></kendo-grid-excel>
   </kendo-grid>
 </div>
 

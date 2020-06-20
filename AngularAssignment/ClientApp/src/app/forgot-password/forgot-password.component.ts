@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialogRef } from '@angular/material/dialog';
 import { UserService } from '../shared/user.service';
 import { NgForm } from '@angular/forms';
+//import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-forgot-password',
@@ -12,7 +13,7 @@ export class ForgotPasswordComponent implements OnInit {
   formModel = {
     Email: ''
   }
-  constructor(public service: UserService, private dialogRef: MatDialogRef<ForgotPasswordComponent>) { }
+  constructor(public service: UserService/*, private toastr: ToastrService*/, private dialogRef: MatDialogRef<ForgotPasswordComponent>) { }
 
   ngOnInit() {
   }
@@ -20,6 +21,7 @@ export class ForgotPasswordComponent implements OnInit {
   OnForgotPassword(form: NgForm) {
     this.service.forgotPassword(form.value).subscribe(
       (res: any) => {
+     //   this.toastr.success('Password is Sent to Your Email Id');
         this.dialogRef.close();
       },
       err => {
